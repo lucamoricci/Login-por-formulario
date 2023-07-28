@@ -1,0 +1,34 @@
+<h1>Product Catalog</h1>
+  
+<div class="container">
+  <div id="product-container" class="product-container">
+
+  </div>
+  
+  <div class="add-product">
+    <h2>Agragar nuevo producto</h2>
+    <form action="/api/products" method="POST">
+      <label for="title">Titulo:</label>
+      <input type="text" id="title" name="title" required>
+      
+      <label for="description">Descripción:</label>
+      <input type="text" id="description" name="description" required>
+      
+      <label for="category">Categoría:</label>
+      <input type="text" id="category" name="category" required>
+      
+      <label for="code">Código:</label>
+      <input type="text" id="code" name="code" required>
+      
+      <label for="price">Precio:</label>
+      <input type="number" id="price" name="price" min="0" step="0.01" required>
+      
+      <label for="stock">Stock:</label>
+      <input type="number" id="stock" name="stock" min="0" required>
+      
+      <button type="submit" id="btn-submit">Agregar</button>
+    </form>
+  </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/public/js/index.js"></script>
